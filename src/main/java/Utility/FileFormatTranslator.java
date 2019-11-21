@@ -6,6 +6,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
+/**
+ * 文件格式转换器
+ * @author ZhouHao
+ * @since 2019年11月21日
+ */
 public class FileFormatTranslator {
 	
 	static class TxtFile {
@@ -23,6 +28,12 @@ public class FileFormatTranslator {
 		}
 	}
 	
+	/**
+	 * 转换文件格式
+	 * @param sourTF
+	 * @param desTF
+	 * @throws Exception
+	 */
 	public static void transFileFormat(TxtFile sourTF, TxtFile desTF) throws Exception {
 		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(sourTF.path));
 		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(desTF.path));
@@ -48,6 +59,12 @@ public class FileFormatTranslator {
 		}
 	}
 	
+	/**
+	 * 转换目录下文件格式
+	 * @param sourTF
+	 * @param desTF
+	 * @throws Exception
+	 */
 	public static void transDictoryFormat(TxtFile sourTF, TxtFile desTF) throws Exception {
 		System.out.println("> start . . ");
 		if(!desTF.path.endsWith(File.separator))	desTF.path += File.separator;
@@ -58,6 +75,12 @@ public class FileFormatTranslator {
 		System.out.println("> end");
 	}
 	
+	/**
+	 * gbk文件转utf8
+	 * @param sourPath
+	 * @param desPath
+	 * @throws Exception
+	 */
 	public static void transGBK2UTF8(String sourPath, String desPath) throws Exception {
 		transDictoryFormat(new TxtFile(sourPath, "GBK"), new TxtFile(desPath, "UTF-8"));
 	}
