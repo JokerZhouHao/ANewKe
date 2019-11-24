@@ -8,20 +8,21 @@ package Utility;
 public class StringUtility {
 	
 	public static void replaceForCopyFromWord() {
-		String st = "Abstract RDF data are traditionally accessed using\r\n" + 
-				"structured query languages, such as SPARQL. However, this requires users to understand the language as\r\n" + 
-				"well as the RDF schema. Keyword search on RDF data\r\n" + 
-				"aims at relieving users from these requirements; users\r\n" + 
-				"only input a set of keywords and the goal is to find\r\n" + 
-				"small RDF subgraphs that contain all keywords. At\r\n" + 
-				"the same time, popular RDF knowledge bases also include spatial and temporal semantics, which opens the\r\n" + 
-				"road to spatio-temporal-based search operations. In this\r\n" + 
-				"work, we propose and study novel keyword-based search\r\n" + 
-				"queries with spatial semantics on RDF data, namely\r\n" + 
-				"kSP queries. The objective of the kSP query is to find\r\n" + 
-				"RDF subgraphs which contain the query keywords and\r\n" + 
-				"are rooted at spatial entities close to the query location. To add temporal semantics to the kSP query, we\r\n" + 
-				"propose the kSPT query that uses two ways to incorporate temporal information. One way is considering";
+		
+		String st = "the temporal differences between the keyword-matched\r\n" + 
+				"vertices and the query timestamp. The other way is\r\n" + 
+				"using a temporal range to filter keyword-matched vertices. The novelty of kSP and kSPT queries is that they\r\n" + 
+				"are spatio-temporal-aware and that they do not rely on\r\n" + 
+				"the use of structured query languages. We design an\r\n" + 
+				"efficient approach containing two pruning techniques\r\n" + 
+				"and a data preprocessing technique for the processing of kSP queries. The proposed approach is extended\r\n" + 
+				"and improved with four optimizations to evaluate kSPT\r\n" + 
+				"queries. Extensive empirical studies on two real datasets\r\n" + 
+				"demonstrate the superior and robust performance of\r\n" + 
+				"our proposals compared to baseline methods.";
+		
+		
+		
 		String targetSeq = "\\r\\n";
 		String repSeq = " ";
 		System.out.println(st.replaceAll(targetSeq, repSeq));
