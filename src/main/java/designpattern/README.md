@@ -1,6 +1,6 @@
 ### 《Head First 设计模式》
 ---
-ch1　[策略模式](./ch01strategy)
+ch1　[策略模式](./ch01strategy/duck)
 
 > 设计原则
 1. 封装变化
