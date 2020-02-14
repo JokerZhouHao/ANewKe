@@ -15,7 +15,7 @@ public class TestThreadPool {
 				int c = count;
 				count++;
 				System.out.println("into " + c);
-				Thread.sleep(5000);
+				Thread.sleep(1000);
 				System.out.println("out " + c);
 			} catch (Exception e) {
 				// TODO: handle exception

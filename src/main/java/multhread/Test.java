@@ -26,9 +26,6 @@ public class Test {
 
 	public static void main(String[] args) throws Exception{
 		
-		Thread t = new Thread(null);
-		
-		
 		ReentrantReadWriteLock rrwLock = new ReentrantReadWriteLock();
 		ReadLock readLock = rrwLock.readLock();
 		readLock.lock();
@@ -113,8 +110,8 @@ public class Test {
 		ConcurrentHashMap<Integer, Integer> chm = new ConcurrentHashMap<Integer, Integer>();
 		chm.put(1, 1);
 		
-		
-		
+		ThreadLocal<Integer> tl = new ThreadLocal<>();
+		tl.get();
 	}
 
 }
